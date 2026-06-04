@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://e54kwhoqtx36"]
+
+[ext_resource type="Script" uid="uid://c2uvf2l7rskik" path="res://Scene/Chest.cs" id="1_ugdib"]
+[ext_resource type="Texture2D" uid="uid://oql47vcaa252" path="res://Assets/Dungeon tileset/Dungeon tileset.png" id="2_fen77"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to8gu"]
+atlas = ExtResource("2_fen77")
+region = Rect2(128.04863, 87.04935, 16.249344, 19.510864)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akbbc"]
+size = Vector2(12, 18)
+
+[node name="Chest" type="StaticBody2D" unique_id=1820102950]
+script = ExtResource("1_ugdib")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1062123234]
+texture_filter = 1
+position = Vector2(0, -1)
+texture = SubResource("AtlasTexture_to8gu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704579301]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_akbbc")

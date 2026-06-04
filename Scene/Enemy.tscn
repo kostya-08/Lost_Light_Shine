@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkaxwgvmjst4e" path="res://Assets/skull knight.png" id="2_2hac7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6d4v"]
-size = Vector2(38, 38)
+size = Vector2(18, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp131"]
 atlas = ExtResource("2_2hac7")

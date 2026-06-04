@@ -3,7 +3,7 @@ using System;
 
 public partial class Teleport : Area2D
 {
-	[Export] public Vector2 TargetPosition = new Vector2(500, 300);
+	[Export] public Vector2 TargetPosition = new Vector2(50, 60);
 	[Export] public string RequiredKey = "Ключ";
 	[Export] public float FadeDuration = 0.5f;
 	

@@ -5,13 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://dcm5hmyigb0jy" path="res://TresAndPNG/circle.png" id="3_jvxg0"]
 [ext_resource type="Texture2D" uid="uid://jv2uwp6km53p" path="res://TresAndPNG/Без имени-1.png" id="4_mud5u"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3eeal"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mud5u"]
+size = Vector2(12, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=1259256881]
+z_index = 1
 script = ExtResource("1_3eeal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151193491]
-shape = SubResource("CircleShape2D_3eeal")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_mud5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1893903074]
 texture_filter = 1
@@ -24,7 +27,7 @@ frame_progress = 0.78653795
 [node name="Pivot" type="Node2D" parent="." unique_id=1145543674]
 
 [node name="PointLight2D" type="PointLight2D" parent="Pivot" unique_id=1117017258]
-energy = 0.6
+energy = 0.79
 range_z_min = -10
 texture = ExtResource("3_jvxg0")
 texture_scale = 0.3
@@ -33,15 +36,19 @@ height = 86.0
 [node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1061673323]
 
 [node name="FlashlightPivot" type="Node2D" parent="." unique_id=1424124119]
+scale = Vector2(1.2, 1.2)
 
 [node name="PointLight2D" type="PointLight2D" parent="FlashlightPivot" unique_id=1987489509]
-position = Vector2(0.5, 62)
-scale = Vector2(18.796295, 13.968171)
+position = Vector2(0, 68.33332)
+scale = Vector2(26.54321, 16.126543)
 energy = 1.5
 shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.70000005)
 shadow_filter = 1
+shadow_filter_smooth = 0.8
 texture = ExtResource("4_mud5u")
 texture_scale = 0.01
+height = 57.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1495756527]
 zoom = Vector2(4, 4)
